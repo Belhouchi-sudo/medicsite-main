@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare Clinic - Home</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-heartbeat me-2"></i>HealthCare Clinic
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="appointment.html">Appointment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <header id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&q=80&w=1920" class="d-block w-100" alt="Hospital Hallway" style="height: 600px; object-fit: cover; filter: brightness(0.7);">
+                <div class="carousel-caption d-none d-md-block text-start top-50 translate-middle-y">
+                    <h1 class="display-4 fw-bold">Welcome to HealthCare Clinic</h1>
+                    <p class="lead">Your well-being, our priority. Providing top-notch medical care for you and your family.</p>
+                    <a href="appointment.html" class="btn btn-lg btn-primary">Make an Appointment</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=1920" class="d-block w-100" alt="Doctor with Patient" style="height: 600px; object-fit: cover; filter: brightness(0.7);">
+                <div class="carousel-caption d-none d-md-block text-start top-50 translate-middle-y">
+                    <h1 class="display-4 fw-bold">Expert Medical Professionals</h1>
+                    <p class="lead">Our team of experienced doctors is here to ensure your health is in good hands.</p>
+                    <a href="about.html" class="btn btn-lg btn-outline-light">Meet Our Doctors</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1920" class="d-block w-100" alt="Medical Equipment" style="height: 600px; object-fit: cover; filter: brightness(0.7);">
+                <div class="carousel-caption d-none d-md-block text-start top-50 translate-middle-y">
+                    <h1 class="display-4 fw-bold">Advanced Technology</h1>
+                    <p class="lead">State-of-the-art facilities for accurate diagnosis and effective treatment.</p>
+                    <a href="services.html" class="btn btn-lg btn-primary">Explore Services</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&q=80&w=800" class="img-fluid rounded shadow" alt="Clinic Interior">
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <h2 class="fw-bold mb-4">Why Choose HealthCare Clinic?</h2>
+                    <p class="lead text-muted">We are dedicated to providing comprehensive and compassionate healthcare services.</p>
+                    <p>At HealthCare Clinic, our mission is to improve the health and well-being of our community through excellence in patient care, education, and research. With over 20 years of experience, we offer a wide range of medical services tailored to meet your unique needs.</p>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Experienced and specialized doctors</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Modern facilities and equipment</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Patient-centered approach</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>24/7 Emergency support</li>
+                    </ul>
+                    <a href="about.html" class="btn btn-outline-primary mt-3">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Patient Testimonials</h2>
+                <p class="text-muted">What our patients say about us</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle mb-3" alt="Patient 1" width="80">
+                            <h5 class="card-title">Sarah Johnson</h5>
+                            <div class="text-warning mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text text-muted">"The staff at HealthCare Clinic is amazing. They were so attentive and made me feel comfortable throughout my visit."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle mb-3" alt="Patient 2" width="80">
+                            <h5 class="card-title">Michael Brown</h5>
+                            <div class="text-warning mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="card-text text-muted">"Professional and efficient. The doctors are very knowledgeable and took the time to explain everything clearly."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle mb-3" alt="Patient 3" width="80">
+                            <h5 class="card-title">Emily Davis</h5>
+                            <div class="text-warning mb-3">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text text-muted">"Best clinic in town! The facilities are top-notch and the scheduling process was super easy."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">HealthCare Clinic</h5>
+                    <p class="text-muted">Providing quality healthcare services to our community. Your health is our mission.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Contact Info</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>123 Medical Center Dr, Cityville</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>info@healthcareclinic.com</li>
+                        <li class="mb-2"><i class="fas fa-ambulance me-2"></i>Emergency: 911</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center text-muted">
+                <small>&copy; 2023 HealthCare Clinic. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

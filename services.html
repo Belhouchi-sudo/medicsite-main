@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare Clinic - Services</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-heartbeat me-2"></i>HealthCare Clinic
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="appointment.html">Appointment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Our Medical Services</h1>
+            <p class="lead">Comprehensive care for you and your family.</p>
+        </div>
+    </header>
+
+    <!-- Services Accordion -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion" id="servicesAccordion">
+
+                        <!-- General Medicine -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fas fa-stethoscope me-3 text-primary"></i> General Medicine
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    <strong>Comprehensive primary care for adults.</strong> Our general medicine
+                                    department provides routine check-ups, diagnosis and treatment of acute and chronic
+                                    illnesses, and preventative care advice. We focus on your overall well-being and
+                                    coordinate with specialists when necessary.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cardiology -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="fas fa-heartbeat me-3 text-danger"></i> Cardiology
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    <strong>Expert heart care.</strong> We offer advanced diagnostic testing and
+                                    treatment for heart conditions, including hypertension, coronary artery disease, and
+                                    arrhythmias. Our cardiologists use state-of-the-art technology to monitor and
+                                    improve your heart health.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pediatrics -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="fas fa-baby me-3 text-info"></i> Pediatrics
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    <strong>Care for your little ones.</strong> From newborns to adolescents, our
+                                    pediatricians provide compassionate care, including vaccinations, growth monitoring,
+                                    and treatment of childhood illnesses. We create a friendly environment to make
+                                    visits less stressful for children.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dermatology -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="fas fa-allergies me-3 text-warning"></i> Dermatology
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    <strong>Skin health specialists.</strong> We diagnose and treat a wide range of skin
+                                    conditions, including acne, eczema, psoriasis, and skin cancer. We also offer
+                                    cosmetic dermatology services to help you look and feel your best.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gynecology & Obstetrics -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <i class="fas fa-female me-3 text-pink"></i> Gynecology & Obstetrics
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    <strong>Women's health.</strong> Comprehensive care for women at every stage of
+                                    life. Services include prenatal care, childbirth, family planning, and treatment of
+                                    reproductive health issues.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Emergency Care -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    <i class="fas fa-ambulance me-3 text-danger"></i> Emergency Care
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    <strong>24/7 Emergency services.</strong> Our emergency department is equipped to
+                                    handle critical medical situations with speed and expertise. We have a dedicated
+                                    team of trauma specialists ready to assist you around the clock.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Medical Imaging -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    <i class="fas fa-x-ray me-3 text-secondary"></i> Medical Imaging
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    <strong>Advanced diagnostics.</strong> We offer a full range of imaging services,
+                                    including X-rays, MRI, CT scans, and ultrasound. Our high-resolution imaging
+                                    technology ensures accurate diagnosis for effective treatment planning.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Laboratory Tests -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingEight">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    <i class="fas fa-vial me-3 text-success"></i> Laboratory Tests
+                                </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                                data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    <strong>Accurate lab results.</strong> Our on-site laboratory performs a wide
+                                    variety of tests, from blood work to pathology. We provide quick and accurate
+                                    results to help your doctor make informed decisions about your health.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">HealthCare Clinic</h5>
+                    <p class="text-muted">Providing quality healthcare services to our community. Your health is our
+                        mission.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Contact Info</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>123 Medical Center Dr, Cityville</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>info@healthcareclinic.com</li>
+                        <li class="mb-2"><i class="fas fa-ambulance me-2"></i>Emergency: 911</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center text-muted">
+                <small>&copy; 2023 HealthCare Clinic. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

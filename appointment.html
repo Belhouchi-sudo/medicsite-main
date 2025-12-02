@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare Clinic - Book Appointment</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-heartbeat me-2"></i>HealthCare Clinic
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="appointment.html">Appointment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+                <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Book an Appointment</h1>
+            <p class="lead">Schedule your visit with our expert doctors.</p>
+        </div>
+    </header>
+
+    <!-- Appointment Form Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow border-0">
+                        <div class="card-body p-5">
+                            <h3 class="fw-bold mb-4 text-center">Appointment Form</h3>
+                            <form id="appointmentForm" novalidate>
+                                <div class="row g-3">
+                                    <!-- First Name -->
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label">First Name <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                        <div class="invalid-feedback">Please enter your first name.</div>
+                                    </div>
+
+                                    <!-- Last Name -->
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">Last Name <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                        <div class="invalid-feedback">Please enter your last name.</div>
+                                    </div>
+
+                                    <!-- Birthdate -->
+                                    <div class="col-md-6">
+                                        <label for="birthdate" class="form-label">Birthdate <span
+                                                class="text-danger">*</span></label>
+                                        <input type="date" class="form-control" id="birthdate" required>
+                                        <div class="invalid-feedback">Please select your birthdate.</div>
+                                        <div id="ageDisplay" class="form-text text-primary fw-bold mt-1"></div>
+                                    </div>
+
+                                    <!-- Gender -->
+                                    <div class="col-md-6">
+                                        <label for="gender" class="form-label">Gender <span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select" id="gender" required>
+                                            <option value="" selected disabled>Select Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select your gender.</div>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email <span
+                                                class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="email" required>
+                                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                                    </div>
+
+                                    <!-- Phone Number -->
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Phone Number <span
+                                                class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="10 digits"
+                                            required>
+                                        <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+                                    </div>
+
+                                    <!-- Address -->
+                                    <div class="col-12">
+                                        <label for="address" class="form-label">Address</label>
+                                        <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+                                    </div>
+
+                                    <!-- Requested Service -->
+                                    <div class="col-md-6">
+                                        <label for="service" class="form-label">Requested Service <span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select" id="service" required>
+                                            <option value="" selected disabled>Select Service</option>
+                                            <option value="general Consultation">General Consultation</option>
+                                            <option value="pediatric Consultation">Pediatric Consultation</option>
+                                            <option value="Cardiology">Cardiology</option>
+                                            <option value="Medical Imaging">Medical imaging</option>
+                                            <option value="Gynecology & Obstetrics">Gynecology & Obstetrics</option>
+                                            <option value="Laboratory Tests">Laboratory Test</option>
+                                            <option value="Dermatology">Dermatology</option>
+                                            <option value="Emergency Care">Emergency Care</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select a service.</div>
+                                    </div>
+
+                                    <!-- Select Doctor -->
+                                    <div class="col-md-6">
+                                        <label for="doctor" class="form-label">Select Doctor</label>
+                                        <select class="form-select" id="doctor">
+                                            <option value="" selected disabled>Select a doctor</option>
+                                            <!-- Options will be populated dynamically -->
+                                        </select>
+                                    </div>
+
+                                    <!-- Preferred Date -->
+                                    <div class="col-md-6">
+                                        <label for="date" class="form-label">Preferred Date <span
+                                                class="text-danger">*</span></label>
+                                        <input type="date" class="form-control" id="date" required>
+                                        <div class="invalid-feedback">Please select a preferred date.</div>
+                                    </div>
+
+                                    <!-- Preferred Time Slot (Hidden by default) -->
+                                    <div class="col-md-6 d-none" id="timeSlotContainer">
+                                        <label for="time" class="form-label">Preferred Time Slot <span
+                                                class="text-danger">*</span></label>
+                                        <input type="time" class="form-control" id="time">
+                                        <div class="invalid-feedback">Please select a time slot.</div>
+                                    </div>
+
+                                    <!-- Allergies / Medical History -->
+                                    <div class="col-12">
+                                        <label for="history" class="form-label">Allergies / Medical History</label>
+                                        <textarea class="form-control" id="history" rows="3"></textarea>
+                                    </div>
+
+                                    <!-- Upload Medical File -->
+                                    <div class="col-12">
+                                        <label for="file" class="form-label">Upload Medical File</label>
+                                        <input class="form-control" type="file" id="file">
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="col-12 text-center mt-4">
+                                        <button type="submit" class="btn btn-primary btn-lg px-5">Book
+                                            Appointment</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="successMessage" class="alert alert-success mt-4 d-none" role="alert">
+                                <i class="fas fa-check-circle me-2"></i>Appointment booked successfully! We will contact
+                                you shortly.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">HealthCare Clinic</h5>
+                    <p class="text-muted">Providing quality healthcare services to our community. Your health is our
+                        mission.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-3">Contact Info</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>123 Medical Center Dr, Cityville</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>info@healthcareclinic.com</li>
+                        <li class="mb-2"><i class="fas fa-ambulance me-2"></i>Emergency: 911</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="text-center text-muted">
+                <small>&copy; 2023 HealthCare Clinic. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
