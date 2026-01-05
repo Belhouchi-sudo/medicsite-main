@@ -47,7 +47,7 @@ $(document).ready(function() {
                 doctorSelect.append(`<option value="${doctor}">${doctor}</option>`);
             });
         }
-    });
+    }); 
 
     // 3. Age Calculation
     $('#birthdate').change(function() {

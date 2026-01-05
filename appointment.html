@@ -31,6 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link active" href="appointment.html">Appointment</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="php/login.php">Login</a></li>
                 </ul>
                 <a href="appointment.html" class="btn btn-primary ms-lg-3">Book Appointment</a>
             </div>
@@ -53,13 +54,13 @@
                     <div class="card shadow border-0">
                         <div class="card-body p-5">
                             <h3 class="fw-bold mb-4 text-center">Appointment Form</h3>
-                            <form id="appointmentForm" novalidate>
+                            <form id="appointmentForm" novalidate method="post" action="php/process_appointment.php" enctype="multipart/form-data">
                                 <div class="row g-3">
                                     <!-- First Name -->
                                     <div class="col-md-6">
                                         <label for="firstName" class="form-label">First Name <span
                                                 class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="firstName" required>
+                                        <input type="text" class="form-control" id="firstName" name="first_name" required>
                                         <div class="invalid-feedback">Please enter your first name.</div>
                                     </div>
 
@@ -67,7 +68,7 @@
                                     <div class="col-md-6">
                                         <label for="lastName" class="form-label">Last Name <span
                                                 class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="lastName" required>
+                                        <input type="text" class="form-control" id="lastName" name="last_name" required>
                                         <div class="invalid-feedback">Please enter your last name.</div>
                                     </div>
 
@@ -75,7 +76,7 @@
                                     <div class="col-md-6">
                                         <label for="birthdate" class="form-label">Birthdate <span
                                                 class="text-danger">*</span></label>
-                                        <input type="date" class="form-control" id="birthdate" required>
+                                        <input type="date" class="form-control" id="birthdate" name="birthdate" required>
                                         <div class="invalid-feedback">Please select your birthdate.</div>
                                         <div id="ageDisplay" class="form-text text-primary fw-bold mt-1"></div>
                                     </div>
@@ -84,7 +85,7 @@
                                     <div class="col-md-6">
                                         <label for="gender" class="form-label">Gender <span
                                                 class="text-danger">*</span></label>
-                                        <select class="form-select" id="gender" required>
+                                        <select class="form-select" id="gender" name="gender" required>
                                             <option value="" selected disabled>Select Gender</option>
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
@@ -97,7 +98,7 @@
                                     <div class="col-md-6">
                                         <label for="email" class="form-label">Email <span
                                                 class="text-danger">*</span></label>
-                                        <input type="email" class="form-control" id="email" required>
+                                        <input type="email" class="form-control" id="email" name="email" required>
                                         <div class="invalid-feedback">Please enter a valid email address.</div>
                                     </div>
 
@@ -105,7 +106,7 @@
                                     <div class="col-md-6">
                                         <label for="phone" class="form-label">Phone Number <span
                                                 class="text-danger">*</span></label>
-                                        <input type="tel" class="form-control" id="phone" placeholder="10 digits"
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="10 digits"
                                             required>
                                         <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
                                     </div>
@@ -113,14 +114,14 @@
                                     <!-- Address -->
                                     <div class="col-12">
                                         <label for="address" class="form-label">Address</label>
-                                        <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+                                        <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St">
                                     </div>
 
                                     <!-- Requested Service -->
                                     <div class="col-md-6">
                                         <label for="service" class="form-label">Requested Service <span
                                                 class="text-danger">*</span></label>
-                                        <select class="form-select" id="service" required>
+                                        <select class="form-select" id="service" name="requested_service" required>
                                             <option value="" selected disabled>Select Service</option>
                                             <option value="general Consultation">General Consultation</option>
                                             <option value="pediatric Consultation">Pediatric Consultation</option>
@@ -137,7 +138,7 @@
                                     <!-- Select Doctor -->
                                     <div class="col-md-6">
                                         <label for="doctor" class="form-label">Select Doctor</label>
-                                        <select class="form-select" id="doctor">
+                                        <select class="form-select" id="doctor" name="selected_doctor">
                                             <option value="" selected disabled>Select a doctor</option>
                                             <!-- Options will be populated dynamically -->
                                         </select>
@@ -147,7 +148,7 @@
                                     <div class="col-md-6">
                                         <label for="date" class="form-label">Preferred Date <span
                                                 class="text-danger">*</span></label>
-                                        <input type="date" class="form-control" id="date" required>
+                                        <input type="date" class="form-control" id="date" name="preferred_date" required>
                                         <div class="invalid-feedback">Please select a preferred date.</div>
                                     </div>
 
@@ -155,20 +156,20 @@
                                     <div class="col-md-6 d-none" id="timeSlotContainer">
                                         <label for="time" class="form-label">Preferred Time Slot <span
                                                 class="text-danger">*</span></label>
-                                        <input type="time" class="form-control" id="time">
+                                    <input type="time" class="form-control" id="time" name="preferred_time">
                                         <div class="invalid-feedback">Please select a time slot.</div>
                                     </div>
 
                                     <!-- Allergies / Medical History -->
                                     <div class="col-12">
                                         <label for="history" class="form-label">Allergies / Medical History</label>
-                                        <textarea class="form-control" id="history" rows="3"></textarea>
+                                        <textarea class="form-control" id="history" name="allergies_history" rows="3"></textarea>
                                     </div>
 
                                     <!-- Upload Medical File -->
                                     <div class="col-12">
                                         <label for="file" class="form-label">Upload Medical File</label>
-                                        <input class="form-control" type="file" id="file">
+                                        <input class="form-control" type="file" id="file" name="medical_file">
                                     </div>
 
                                     <!-- Submit Button -->
