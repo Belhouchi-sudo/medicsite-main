@@ -27,15 +27,7 @@ $(document).ready(function() {
     $('#service').change(function() {
         const selectedService = $(this).val();
         
-        // Show/Hide Preferred Time Slot based on 'Special Consultation'
-        if (selectedService === 'special') {
-            $('#timeSlotContainer').removeClass('d-none');
-            $('#time').prop('required', true);
-        } else {
-            $('#timeSlotContainer').addClass('d-none');
-            $('#time').prop('required', false);
-            $('#time').val(''); // Clear value when hidden
-        }
+
 
         // Update Doctor List dynamically
         const doctorSelect = $('#doctor');
