@@ -73,8 +73,7 @@ $(document).ready(function() {
 
     // 4. Form Validation
     $('#appointmentForm').submit(function(event) {
-        // Prevent default form submission
-        event.preventDefault();
+        // Don't prevent default - allow form to submit to PHP after validation
         event.stopPropagation();
 
         let isValid = true;
@@ -116,28 +115,13 @@ $(document).ready(function() {
             isValid &= validateField('#time', $('#time').val() !== '');
         }
 
-        if (isValid) {
-            // Show success message
-            $('#successMessage').removeClass('d-none');
-            
-            // Scroll to success message
-            $('html, body').animate({
-                scrollTop: $("#successMessage").offset().top - 100
-            }, 500);
-            
-            // Reset form after 3 seconds
-            setTimeout(function() {
-                form[0].reset();
-                form.find('.form-control, .form-select').removeClass('is-valid');
-                $('#successMessage').addClass('d-none');
-                $('#ageDisplay').text('');
-                $('#timeSlotContainer').addClass('d-none');
-            }, 3000);
-        } else {
-            // If invalid, scroll to the first error
+        if (!isValid) {
+            // If invalid, prevent submission and scroll to the first error
+            event.preventDefault();
             $('html, body').animate({
                 scrollTop: $(".is-invalid").first().offset().top - 100
             }, 500);
         }
+        // If valid, form will submit naturally to process_appointment.php
     });
 });
