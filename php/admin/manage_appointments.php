@@ -8,10 +8,11 @@ $rows = $stmt->fetchAll();
 ?>
 <!doctype html>
 <html><head><meta charset="utf-8"><title>Manage Appointments</title>
-<link href="../../css/style.css" rel="stylesheet"></head><body>
+<link href="../../css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css"></head><body>
 <div class="container" style="margin:30px auto;max-width:1100px;">
   <h3>Manage Appointments</h3>
-  <table class="table table-striped">
+  <table id="appointmentsTable" class="table table-striped">
     <thead><tr><th>First Name</th><th>Last Name</th><th>Requested Service</th><th>Preferred Date</th><th>Actions</th></tr></thead>
     <tbody>
     <?php foreach($rows as $r): ?>
@@ -34,4 +35,8 @@ $rows = $stmt->fetchAll();
   </table>
   <p><a href="dashboard.php" class="btn btn-link">Back to Dashboard</a></p>
 </div>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+<script>$(document).ready(function(){$('#appointmentsTable').DataTable();});</script>
 </body></html>

@@ -83,6 +83,14 @@ $stmt->execute([
     ':file' => $uploadedFileName
 ]);
 
+// Send email notification
+$subject = "Appointment Confirmation - HealthCare Clinic";
+$message = "Dear $first_name $last_name,\n\nYour appointment request for $requested_service on $preferred_date has been received. We will contact you shortly to confirm the details.\n\nThank you,\nHealthCare Clinic";
+$headers = "From: no-reply@healthcareclinic.com";
+if ($email) {
+    @mail($email, $subject, $message, $headers);
+}
+
 // Success message
 ?>
 <!doctype html>
@@ -90,7 +98,7 @@ $stmt->execute([
 <head>
   <meta charset="utf-8">
   <title>Appointment Submitted</title>
-  <link href="/css/style.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
   <div class="container" style="max-width:700px;margin:40px auto;">
